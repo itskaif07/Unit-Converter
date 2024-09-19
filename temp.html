@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+   
+
+    <a href="index.html" class="lg:fixed lg:top-0 lg:left-5 my-4 flex items-center justify-center w-20  text-center mx-auto text-lg font-semibold bg-[#e8e407] text-white px-4 py-2 rounded-md">
+        <div>HOME</div>
+    </a>
+
+    <h1 class="text-center text-3xl font-bold my-4 lg:my-10">Welcome to Temperature Converter</h1>
+
+    <div class="flex justify-center flex-col items-center space-y-10">
+
+        <!-- Input Value -->
+        <div class="flex flex-col items-center justify-center space-y-4">
+            <h1 class="text-lg font-medium text-center">Enter the Temperature: </h1>
+            <input type="number" id="inputValue" class="border-2 border-black rounded-md text-center p-2"
+                placeholder="Enter value">
+        </div>
+
+        <!-- From Unit -->
+        <div class="flex flex-col items-center justify-center space-y-4">
+            <h1 class="text-lg font-medium text-center">Select the Temperature to Convert From: </h1>
+            <select id="fromUnit" class="border-2 border-black rounded-md cursor-pointer p-2">
+                <option value="Celcius">Celcius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+        </div>
+
+        <!-- To Unit -->
+        <div class="flex flex-col items-center justify-center space-y-4">
+            <h1 class="text-lg font-medium text-center">Select the Temperature to Convert To: </h1>
+            <select id="toUnit" class="border-2 border-black rounded-md cursor-pointer p-2">
+                <option value="Celcius">Celcius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+        </div>
+
+        <!-- Convert Button -->
+        <div>
+            <button class="bg-[#e8e407] text-white px-8 py-2 rounded-md text-base">Convert</button>
+        </div>
+
+        <!-- Result -->
+        <div id="resultDiv" class="flex justify-center items-center result text-center space-x-4 hidden">
+            <h1 class="text-xl font-medium hidden lg:block">Result: </h1>
+            <h1 class="font-medium text-xl" id="result"></h1>
+        </div>
+
+    </div>
+
+    <script src="temp.js"></script>
+</body>
+
+</html>
